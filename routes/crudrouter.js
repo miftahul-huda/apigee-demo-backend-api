@@ -13,6 +13,7 @@ class CrudRouter {
             let o = req.body;
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
         
             logic.create(o).then(function (savedO)
             {
@@ -28,6 +29,8 @@ class CrudRouter {
             me.init(req, res);
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
+
 
             let offset = req.query.offset;
             let limit = req.query.limit;
@@ -50,6 +53,8 @@ class CrudRouter {
             me.init(req, res);
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
+
             let search = req.params.search;
         
             let offset = req.query.offset;
@@ -75,6 +80,8 @@ class CrudRouter {
             me.init(req, res);
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
+
             let filter = req.body;
         
             let offset = req.query.offset;
@@ -101,6 +108,8 @@ class CrudRouter {
             let id = req.params.id;
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
+
             logic.get(id).then(function (os)
             {
                 res.send(os);
@@ -117,6 +126,8 @@ class CrudRouter {
             let id = req.params.id;
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
+
             logic.update(id, o).then(function (savedO)
             {
                 res.send(savedO);
@@ -132,6 +143,8 @@ class CrudRouter {
             let id = req.params.id;
             let logic = router.logic;
             logic.session = req.session;
+            logic.query = req.query;
+
             logic.delete(id).then(function (result)
             {
                 res.send(result);

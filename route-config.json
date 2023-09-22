@@ -1,4 +1,6 @@
 [
     { "path" :  "", "router"  : "./routes/web" },
-    { "path" :  "/sample", "router"  : "./routes/sample", "logic" : "./modules/logic/sample_logic" }
+    { "path" :  "/user", "router"  : "./routes/user", "logic" : "./modules/logic/userlogic" },
+    { "path" :  "/product", "router"  : "./routes/product", "logic" : "./modules/logic/productlogic" },
+    { "path" :  "/userpurchase", "router"  : "./routes/userpurchase", "logic" : "./modules/logic/userpurchaselogic" }
 ]
